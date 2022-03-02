@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    allow-circular-references: true
+
+  application:
+    name: "social"
+
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: "your facebook id"
+            client-secret: "your facebook secret"
+          google:
+            client-id: "your google id"
+            client-secret: "your google secret"
+
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    open-in-view: false
+    hibername:
+      ddl-auto: create
+
+  datasource:
+    url: jdbc:mysql://localhost:3366/social
+    username: root
+    password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
